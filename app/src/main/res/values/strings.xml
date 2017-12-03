@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Quandoo Demo</string>
+    <string name="activity_customers">Customers</string>
+    <string name="activity_tables">Tables</string>
+    <string name="content_description_choose_table">Choose table</string>
+
+    <string name="customer_display_name">%1$s %2$s</string>
+    <string name="table_available">Available</string>
+    <string name="table_reserved">Reserved</string>
+    <string name="tap_to_reserve_table">Tap to reserve table</string>
+    <string name="table_reservation_made">Table %1$s has been reserved for %2$s %3$s</string>
+    <string name="error_loading">Sorry, customers could not be loaded.</string>
+    <string name="retry">Retry</string>
+    <string name="find_customer">Find Customer</string>
+</resources>
