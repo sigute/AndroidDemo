@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/customer_display_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/product_indicator"
+        android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:textSize="@dimen/text_subtitle"
+        tools:text="Name Surname" />
+
+    <ImageView
+        android:id="@+id/product_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_choose_table"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/ic_chevron_right" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/customer_display_name"
+        android:background="@color/divider"
+        android:importantForAccessibility="no" />
+</RelativeLayout>
