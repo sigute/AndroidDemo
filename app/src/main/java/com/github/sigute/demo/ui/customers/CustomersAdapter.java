@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.github.sigute.demo.R;
 import com.github.sigute.demo.api.model.Customer;
+import com.github.sigute.demo.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,25 +32,13 @@ public class CustomersAdapter extends RecyclerView.Adapter<CustomerViewHolder> {
 
     public void setCustomers(@NonNull List<Customer> customers) {
         this.originalCustomers = customers;
-        this.customers = filterCustomers(originalCustomers, searchFilter);
+        this.customers = Utils.filterCustomers(originalCustomers, searchFilter);
         notifyDataSetChanged();
-    }
-
-    @NonNull
-    private static List<Customer> filterCustomers(@NonNull List<Customer> customers, String searchFilter) {
-        List<Customer> filteredCustomers = new ArrayList<>();
-        for (Customer customer : customers) {
-            if (customer.getFirstName().toLowerCase().contains(searchFilter.toLowerCase())
-                    || customer.getLastName().toLowerCase().contains(searchFilter.toLowerCase())) {
-                filteredCustomers.add(customer);
-            }
-        }
-        return filteredCustomers;
     }
 
     public void setFilter(@NonNull String searchFilter) {
         this.searchFilter = searchFilter;
-        this.customers = filterCustomers(originalCustomers, searchFilter);
+        this.customers = Utils.filterCustomers(originalCustomers, searchFilter);
         notifyDataSetChanged();
     }
 
